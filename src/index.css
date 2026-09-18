@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Sora", system-ui, sans-serif;
+  --font-display: "Sora", system-ui, sans-serif;
+  --color-ink: #031711;
+  --color-ink-2: #0d3b2e;
+  --color-parchment: #ffffff;
+  --color-mute: rgb(255 255 255 / 0.8);
+  --color-gold: #eab308;
+  --color-gold-deep: #ca8a04;
+  --color-teal: #4ade80;
+  --color-grove: #0d3b2e;
+  --color-grove-deep: #031711;
+  --color-grove-card: #124a3a;
+  --color-canopy: #d7efe4;
+  --color-yellow: #eab308;
+  --color-yellow-deep: #ca8a04;
+  --color-sun: #eab308;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.6rem;
+}
+
+body {
+  min-height: 100svh;
+  background: linear-gradient(180deg, #0d3b2e 0%, #031711 100%);
+  color: rgb(255 255 255 / 0.8);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color-scheme: dark;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+@utility grove-section {
+  background-image: linear-gradient(180deg, #0d3b2e 0%, #031711 100%);
+}
+
+@utility kicker {
+  margin-bottom: 1rem;
+  display: inline-flex;
+  border-radius: 999px;
+  border: 1px solid rgb(74 222 128 / 0.4);
+  background: rgb(74 222 128 / 0.1);
+  padding: 0.25rem 0.75rem;
+  color: #4ade80;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@utility panel {
+  position: relative;
+  border: 1px solid rgb(234 179 8 / 0.2);
+  background: rgb(18 74 58 / 0.6);
+  border-radius: 1rem;
+  box-shadow: none;
+  backdrop-filter: blur(8px);
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+@utility btn {
+  cursor: pointer;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  transition:
+    filter 0.2s,
+    background 0.2s,
+    color 0.2s;
+}
+
+@utility btn-gold {
+  color: #031711;
+  background: #eab308;
+  box-shadow: 0 8px 20px rgb(234 179 8 / 0.28);
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+@utility btn-glass {
+  color: #4ade80;
+  background: transparent;
+  box-shadow: inset 0 0 0 2px #4ade80;
+  &:hover {
+    background: rgb(74 222 128 / 0.1);
+  }
+}
+
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+.ring-outer {
+  background: conic-gradient(
+    from 120deg,
+    transparent 0 70%,
+    rgb(234 179 8 / 0.7),
+    transparent 78%
+  );
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+}
+
+.facet {
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 36s linear infinite;
+}
+
+.animate-spin-slower {
+  animation: spin-slow 22s linear infinite reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-spin-slow,
+  .animate-spin-slower {
+    animation: none;
+  }
+}
