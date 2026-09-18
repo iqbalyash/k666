@@ -29,8 +29,13 @@ export function Footer() {
         </nav>
       </div>
       <p className="mt-8 text-[0.78rem] text-white/60">
-        © 2026 House Meridian. A work of fiction. No keepers were forgotten in the making of this
-        hour.
+        © 2026{' '}
+        <Link
+          to="/"
+          className="font-semibold text-[#4ade80] underline decoration-[#4ade80]/40 underline-offset-4 transition hover:text-[#86efac] hover:decoration-[#86efac]"
+        >
+          K666 Game
+        </Link>. Your Ultimate Gateway to Instant Rewards & Non-Stop Gaming.
       </p>
     </footer>
   )
