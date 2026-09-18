@@ -51,7 +51,7 @@ export function Hero() {
           {[
             ['Game Name', 'K666 Game'],
             ['Version', '1.1.5'],
-            ['File Size', '15MB'],
+            ['File Size', '7.32 MB'],
           ].map(([label, value]) => (
             <div key={label}>
               <dt className="text-[0.68rem] font-semibold tracking-[0.12em] text-[#4ade80] uppercase md:tracking-[0.16em]">
