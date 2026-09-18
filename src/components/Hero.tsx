@@ -16,11 +16,31 @@ export function Hero() {
       id="hero"
       className="grove-section grid min-h-[calc(100svh-4.6rem)] items-center gap-[4vw] px-[6vw] py-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)] lg:py-[5.5rem]"
     >
-      <div>
-        <p className="kicker">Latest APK · Pakistan 2026</p>
-        <h1 className="max-w-[22ch] text-[clamp(1.85rem,4.4vw,3.4rem)] font-bold leading-[1.12] text-white">
-          K666 Game Download APK Latest Version 2026 | Real Earning App in Pakistan
-        </h1>
+      <div className="flex flex-col">
+        <div className="flex flex-col gap-6">
+          <h1 className="max-w-[22ch] text-[clamp(1.85rem,4.4vw,3.4rem)] font-bold leading-[1.12] text-white">
+            K666 Game Download APK Latest Version 2026 | Real Earning App in Pakistan
+          </h1>
+          <div id="register" className="flex flex-col gap-3.5 sm:flex-row sm:flex-wrap">
+            <a
+              href={APK_URL}
+              className="btn btn-gold min-w-[10.5rem] px-7 py-3.5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Register
+            </a>
+            <a
+              id="download"
+              href={APK_URL}
+              className="btn btn-glass min-w-[10.5rem] px-7 py-3.5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download APK
+            </a>
+          </div>
+        </div>
         <p className="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-white/80">
           The K666 platform has emerged as a feature-rich mobile gaming platform in Pakistan,
           combining interactive casino-style titles, sports betting, and real-money gaming options.
@@ -29,25 +49,6 @@ export function Hero() {
           everything you need to know—from registration procedures and first-deposit match tiers to
           VIP progression and game catalogs.
         </p>
-        <div id="register" className="mt-8 flex flex-wrap gap-3.5">
-          <a
-            href={APK_URL}
-            className="btn btn-gold min-w-[10.5rem] px-7 py-3.5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Register
-          </a>
-          <a
-            id="download"
-            href={APK_URL}
-            className="btn btn-glass min-w-[10.5rem] px-7 py-3.5"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Download APK
-          </a>
-        </div>
         <dl className="mt-10 grid grid-cols-3 gap-3 border-t border-[#eab308]/20 pt-6 md:gap-5">
           {[
             ['Game Name', 'K666 Game'],
