@@ -14,7 +14,7 @@ export function Home() {
     <>
       <PageMeta
         title="K666 Game Download APK | Real Earning App in Pakistan"
-        description="K666 Game Download — play Aviator, Fortune Gems 3, Teen Patti, and sportsbook titles with JazzCash, EasyPaisa, and VIP rewards in Pakistan."
+        description="Download K666 Game APK latest version 2026 in Pakistan. Enjoy real-money games like Aviator, Teen Patti & Slots with instant JazzCash & EasyPaisa withdrawals!"
         jsonLd={getFaqJsonLd(origin)}
       />
       <Hero />

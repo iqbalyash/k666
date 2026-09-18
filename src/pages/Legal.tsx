@@ -110,13 +110,6 @@ export function Privacy() {
       description="Privacy Policy for k666app.net.pk — the types of information collected by our informational directory and how we use it."
       kicker="Legal Notice"
       heading="Privacy Policy"
-      metaLine={
-        <>
-          Effective Date: January 1, 2026
-          <br />
-          Website Domain: <Link to="/">k666app.net.pk</Link>
-        </>
-      }
     >
       <p>
         At <Link to="/">k666app.net.pk</Link>, accessible from{' '}
